@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class CarouselScreen extends StatelessWidget {
   final List<String> images = [
@@ -8,20 +9,22 @@ class CarouselScreen extends StatelessWidget {
     'assets/images/slide3.png',
   ];
 
+  // Captions will be localized
   final List<String> captions = [
-    "Play Seamlessly",
-    "Control with Ease",
-    "Experience Freedom",
+    "play_seamlessly",
+    "control_with_ease",
+    "experience_freedom",
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Image.asset('assets/images/logo.png', height: 80),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           CarouselSlider.builder(
             options: CarouselOptions(
               height: 400,
@@ -45,10 +48,10 @@ class CarouselScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   Text(
-                    captions[index],
-                    style: TextStyle(
+                    captions[index].tr(), // ✅ Localized
+                    style: const TextStyle(
                       color: Colors.white,
                       fontSize: 16,
                       fontWeight: FontWeight.w500,
@@ -58,12 +61,12 @@ class CarouselScreen extends StatelessWidget {
               );
             },
           ),
-          SizedBox(height: 30),
+          const SizedBox(height: 30),
           TextButton(
             onPressed: () => Navigator.pushReplacementNamed(context, '/home'),
             child: Text(
-              "Continue",
-              style: TextStyle(color: Colors.white, fontSize: 16),
+              tr("continue"), // ✅ Localized
+              style: const TextStyle(color: Colors.white, fontSize: 16),
             ),
           ),
         ],

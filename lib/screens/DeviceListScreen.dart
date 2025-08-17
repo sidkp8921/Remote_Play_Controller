@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:remote_app/screens/AddDeviceScreen.dart';
+import 'package:remote_app/screens/HelpScreen.dart';
 
 class DeviceListScreen extends StatelessWidget {
   @override
@@ -13,9 +15,12 @@ class DeviceListScreen extends StatelessWidget {
           onTap: () => Navigator.pop(context),
           child: const Icon(Icons.arrow_back, color: Colors.white),
         ),
-        title: const Text(
-          'Device List',
-          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+        title: Text(
+          tr('device_list'), // ✅ Localized
+          style: const TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+          ),
         ),
         centerTitle: true,
       ),
@@ -25,17 +30,17 @@ class DeviceListScreen extends StatelessWidget {
           children: [
             Image.asset('assets/images/search.png', height: 150),
             const SizedBox(height: 20),
-            const Text(
-              'No consoles added or discovered',
-              style: TextStyle(color: Colors.white70),
+            Text(
+              tr('no_consoles_found'), // ✅ Localized
+              style: const TextStyle(color: Colors.white70),
             ),
             const SizedBox(height: 10),
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20.0),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: Text(
-                'Please make sure your phone and PS are connected to the same Wi-Fi network.',
+                tr('same_wifi_message'), // ✅ Localized
                 textAlign: TextAlign.center,
-                style: TextStyle(color: Colors.white54, fontSize: 12),
+                style: const TextStyle(color: Colors.white54, fontSize: 12),
               ),
             ),
             const SizedBox(height: 20),
@@ -46,10 +51,15 @@ class DeviceListScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20),
                 ),
               ),
-              onPressed: () {},
-              child: const Text(
-                "I can't find my PS device",
-                style: TextStyle(color: Colors.white),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => HelpScreen()),
+                );
+              },
+              child: Text(
+                tr("cant_find_device"), // ✅ Localized
+                style: const TextStyle(color: Colors.white),
               ),
             ),
             const SizedBox(height: 40),
@@ -71,9 +81,9 @@ class DeviceListScreen extends StatelessWidget {
                     MaterialPageRoute(builder: (_) => AddDeviceScreen()),
                   );
                 },
-                child: const Text(
-                  'Add device manually +',
-                  style: TextStyle(
+                child: Text(
+                  tr('add_device_manually'), // ✅ Localized
+                  style: const TextStyle(
                     color: Colors.white,
                     fontSize: 16,
                     fontWeight: FontWeight.bold,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart' show launchUrl, LaunchMode;
+import 'package:easy_localization/easy_localization.dart';
 
 class TutorialScreen extends StatelessWidget {
   final Uri _tutorialUrl = Uri.parse(
@@ -16,8 +17,8 @@ class TutorialScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: BackButton(),
-        title: Text("Tutorial"),
+        leading: const BackButton(),
+        title: Text("tutorial_title".tr()),
         centerTitle: true,
       ),
       body: Column(
@@ -25,32 +26,32 @@ class TutorialScreen extends StatelessWidget {
         children: [
           // Tutorial Image
           Center(child: Image.asset("assets/images/tutorial.png", height: 250)),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20.0),
             child: Column(
               children: [
                 Text(
-                  "Register your Play Station device on our app",
-                  style: TextStyle(
+                  "tutorial_register".tr(),
+                  style: const TextStyle(
                     color: Colors.white,
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
                   ),
                   textAlign: TextAlign.center,
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 Text(
-                  "In case you do not have an account, you can sign up for a new account.",
-                  style: TextStyle(color: Colors.white70, fontSize: 14),
+                  "tutorial_signup".tr(),
+                  style: const TextStyle(color: Colors.white70, fontSize: 14),
                   textAlign: TextAlign.center,
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 GestureDetector(
                   onTap: _launchTutorial,
                   child: Text(
-                    "Watch detailed video tutorial",
-                    style: TextStyle(
+                    "tutorial_watch".tr(),
+                    style: const TextStyle(
                       color: Colors.blueAccent,
                       fontSize: 14,
                       decoration: TextDecoration.underline,
@@ -60,7 +61,7 @@ class TutorialScreen extends StatelessWidget {
               ],
             ),
           ),
-          Spacer(),
+          const Spacer(),
           Padding(
             padding: const EdgeInsets.symmetric(
               horizontal: 40.0,
@@ -69,7 +70,7 @@ class TutorialScreen extends StatelessWidget {
             child: Container(
               width: double.infinity,
               decoration: BoxDecoration(
-                gradient: LinearGradient(
+                gradient: const LinearGradient(
                   colors: [Color(0xFF00C6FF), Color(0xFF0072FF)],
                   begin: Alignment.centerLeft,
                   end: Alignment.centerRight,
@@ -80,7 +81,7 @@ class TutorialScreen extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.transparent,
                   shadowColor: Colors.transparent,
-                  padding: EdgeInsets.symmetric(vertical: 14),
+                  padding: const EdgeInsets.symmetric(vertical: 14),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12),
                   ),
@@ -89,8 +90,8 @@ class TutorialScreen extends StatelessWidget {
                     Navigator.pushReplacementNamed(context, '/home'),
                 child: Center(
                   child: Text(
-                    "Get Started",
-                    style: TextStyle(
+                    "get_started".tr(),
+                    style: const TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
                       color: Colors.white,

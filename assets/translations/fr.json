@@ -1,0 +1,58 @@
+{
+  "select_language": "Choisir la langue",
+  "continue": "Continuer",
+  "play_seamlessly": "Jouer sans interruption",
+  "control_with_ease": "Contrôlez facilement",
+  "experience_freedom": "Expérimentez la liberté",
+  "connect_your_device": "Connectez votre appareil",
+  "game_pad_mode": "Mode manette",
+  "remote_mode": "Mode à distance",
+  "preview": "Aperçu",
+
+  "step1": "Étape 1",
+  "step1_title": "Allumez votre console",
+  "step1_subtitle": "Assurez-vous que votre appareil est allumé et connecté.",
+  "step2": "Étape 2",
+  "step2_title": "Activez le jeu à distance",
+  "step2_subtitle": "Allez dans Paramètres > Jeu à distance et activez-le.",
+  "step3": "Étape 3",
+  "step3_title": "Associez votre appareil",
+  "step3_subtitle": "Sélectionnez votre console dans la liste pour vous connecter.",
+
+  "select_device_firmware": "Sélectionner le firmware de l'appareil",
+  "ps3": "PS3",
+  "ps4_8_up": "PS4 ≥ 8.0",
+  "ps4_7_8": "7.0 ≤ PS4 < 8.0",
+  "ps4_below_7": "PS4 < 7.0",
+  "add_device": "Ajouter un appareil +",
+  "loading": "Chargement...",
+  "enable_remote_play": "Activer le jeu à distance",
+  "ps4": "PS4",
+  "ps5": "PS5",
+
+  "help_step1_title": "Étape 1 : Activer le jeu à distance",
+  "help_step2_title": "Étape 2 : Configurer la connexion Internet",
+  "help_step2_desc": "Assurez-vous que votre console PlayStation est connectée au même réseau Wi-Fi que votre appareil pour que le jeu à distance fonctionne correctement."
+, "settings_title": "Paramètres",
+  "settings_language": "Langue",
+  "settings_rate": "Noter l'application",
+  "settings_feedback": "Retour d'information",
+  "settings_share": "Partager l'application",
+  "settings_privacy": "Politique de confidentialité",
+  "settings_version": "Version de l'application",
+  
+  "feedback_title": "Donner un avis",
+  "feedback_no_ads": "Je veux sans publicité",
+  "feedback_dont_know": "Je ne sais pas comment utiliser",
+  "feedback_other": "Autre",
+  
+  "ok": "OK","rate_question": "Que pensez-vous de l'application ?\nVotre avis est important pour nous",
+ "rate_best_star": "La meilleure étoile de notation",  "device_list": "Liste des appareils",
+  "no_consoles_found": "Aucune console trouvée",
+  "same_wifi_message": "Veuillez vous assurer que votre console et votre appareil sont connectés au même réseau Wi-Fi.",
+  "cant_find_device": "Vous ne trouvez pas votre appareil ?",
+  "add_device_manually": "Ajouter un appareil manuellement","no_internet_title": "Pas de connexion Internet",
+  "no_internet_message": "Veuillez vérifier votre Wi-Fi ou vos données mobiles et réessayer.",
+  "retry": "Réessayer"
+
+}

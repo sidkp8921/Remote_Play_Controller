@@ -1,0 +1,53 @@
+{
+  "select_language": "Pilih Bahasa",
+  "continue": "Lanjutkan",
+  "play_seamlessly": "Bermain tanpa hambatan",
+  "control_with_ease": "Kontrol dengan mudah",
+  "experience_freedom": "Rasakan kebebasan",
+  "connect_your_device": "Hubungkan perangkat Anda",
+  "game_pad_mode": "Mode Gamepad",
+  "remote_mode": "Mode Jarak Jauh",
+  "preview": "Pratinjau",
+
+  "step1": "Langkah 1",
+  "step1_title": "Nyalakan Konsol Anda",
+  "step1_subtitle": "Pastikan perangkat Anda menyala dan terhubung.",
+  "step2": "Langkah 2",
+  "step2_title": "Aktifkan Remote Play",
+  "step2_subtitle": "Buka Pengaturan > Remote Play dan aktifkan.",
+  "step3": "Langkah 3",
+  "step3_title": "Pasangkan Perangkat Anda",
+  "step3_subtitle": "Pilih konsol Anda dari daftar untuk terhubung.",
+
+  "select_device_firmware": "Pilih firmware perangkat",
+  "ps3": "PS3",
+  "ps4_8_up": "PS4 ≥ 8.0",
+  "ps4_7_8": "7.0 ≤ PS4 < 8.0",
+  "ps4_below_7": "PS4 < 7.0",
+  "add_device": "Tambah perangkat +",
+  "loading": "Memuat...",
+  "enable_remote_play": "Aktifkan Remote Play",
+  "ps4": "PS4",
+  "ps5": "PS5",
+
+  "help_step1_title": "Langkah 1: Aktifkan Remote Play",
+  "help_step2_title": "Langkah 2: Atur Koneksi Internet",
+  "help_step2_desc": "Pastikan konsol PlayStation Anda terhubung ke jaringan Wi-Fi yang sama dengan perangkat Anda agar Remote Play berfungsi dengan baik."
+
+, "settings_title": "Pengaturan",
+  "settings_language": "Bahasa",
+  "settings_rate": "Beri Nilai Aplikasi",
+  "settings_feedback": "Masukan",
+  "settings_share": "Bagikan Aplikasi",
+  "settings_privacy": "Kebijakan Privasi",
+  "settings_version": "Versi Aplikasi",
+
+  "feedback_title": "Beri Masukan",
+  "feedback_no_ads": "Saya tidak ingin melihat iklan",
+  "feedback_dont_know": "Saya tidak tahu cara menggunakan",
+  "feedback_other": "Lainnya",
+
+  "ok": "OK","rate_question": "Bagaimana perasaan Anda tentang aplikasi ini?\nMasukan Anda penting bagi kami",
+"rate_best_star": "Bintang penilaian terbaik"
+
+}

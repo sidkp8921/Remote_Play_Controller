@@ -1,0 +1,38 @@
+{
+  "select_language": "Selecionar idioma",
+  "continue": "Continuar",
+  "play_seamlessly": "Jogue sem interrupções",
+  "control_with_ease": "Controle com facilidade",
+  "experience_freedom": "Experimente a liberdade",
+  "connect_your_device": "Conecte seu dispositivo",
+  "game_pad_mode": "Modo Gamepad",
+  "remote_mode": "Modo Remoto",
+  "preview": "Pré-visualizar",
+
+  "step1": "Passo 1",
+  "step1_title": "Ligue seu console",
+  "step1_subtitle": "Certifique-se de que o dispositivo está ligado e conectado.",
+  "step2": "Passo 2",
+  "step2_title": "Ativar Remote Play",
+  "step2_subtitle": "Vá em Configurações > Remote Play e ative.",
+  "step3": "Passo 3",
+  "step3_title": "Emparelhar seu dispositivo",
+  "step3_subtitle": "Selecione seu console na lista para conectar.",
+
+  "select_device_firmware": "Selecionar firmware do dispositivo",
+  "ps3": "PS3",
+  "ps4_8_up": "PS4 ≥ 8.0",
+  "ps4_7_8": "7.0 ≤ PS4 < 8.0",
+  "ps4_below_7": "PS4 < 7.0",
+  "add_device": "Adicionar dispositivo +",
+  "loading": "Carregando...",
+  "enable_remote_play": "Ativar Jogo Remoto",
+  "ps4": "PS4",
+  "ps5": "PS5",
+
+  "help_step1_title": "Etapa 1: Ativar Jogo Remoto",
+  "help_step2_title": "Etapa 2: Configurar Conexão com a Internet",
+  "help_step2_desc": "Certifique-se de que seu console PlayStation esteja conectado à mesma rede Wi-Fi que seu dispositivo para que o jogo remoto funcione corretamente."
+,"rate_question": "O que você acha do aplicativo?\nSeu feedback é importante para nós",
+"rate_best_star": "A melhor estrela de avaliação"
+}

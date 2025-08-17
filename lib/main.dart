@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:carousel_slider/carousel_slider.dart';
+import 'package:easy_localization/easy_localization.dart';
+
 import 'package:remote_app/screens/AddDeviceScreen.dart';
+import 'package:remote_app/screens/HelpScreen.dart';
 import 'package:remote_app/screens/HowToUseScreen.dart';
 import 'package:remote_app/screens/SplashScreen.dart';
 import 'package:remote_app/screens/TutorialScreen.dart';
@@ -15,35 +17,54 @@ import 'screens/TouchpadScreen.dart';
 import 'screens/SettingsScreen.dart';
 import 'screens/WelcomeScreen.dart';
 
-void main() => runApp(RemotePSApp());
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await EasyLocalization.ensureInitialized();
+
+  runApp(
+    EasyLocalization(
+      supportedLocales: const [Locale('en'), Locale('ar'), Locale('hi')],
+      path: 'assets/translations',
+      fallbackLocale: const Locale('en'),
+      child: const RemotePSApp(),
+    ),
+  );
+}
 
 class RemotePSApp extends StatelessWidget {
+  const RemotePSApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'PS Remote Controller',
+      localizationsDelegates: context.localizationDelegates,
+      supportedLocales: context.supportedLocales,
+      locale: context.locale,
       theme: ThemeData(
         brightness: Brightness.dark,
         scaffoldBackgroundColor: Colors.black,
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
             foregroundColor: Colors.white,
-            backgroundColor: Color(0xFF1F1F1F),
+            backgroundColor: const Color(0xFF1F1F1F),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(12),
             ),
-            padding: EdgeInsets.symmetric(vertical: 16),
-            textStyle: TextStyle(fontSize: 16),
+            padding: const EdgeInsets.symmetric(vertical: 16),
+            textStyle: const TextStyle(fontSize: 16),
           ),
         ),
-        appBarTheme: AppBarTheme(
+        appBarTheme: const AppBarTheme(
           backgroundColor: Colors.black,
           elevation: 0,
           centerTitle: true,
           titleTextStyle: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
         ),
-        textTheme: TextTheme(bodyMedium: TextStyle(color: Colors.white70)),
+        textTheme: const TextTheme(
+          bodyMedium: TextStyle(color: Colors.white70),
+        ),
       ),
       initialRoute: '/',
       routes: {
@@ -60,6 +81,7 @@ class RemotePSApp extends StatelessWidget {
         '/tutorial': (context) => TutorialScreen(),
         '/device_list': (context) => DeviceListScreen(),
         '/add_device': (context) => AddDeviceScreen(),
+        '/help': (context) => HelpScreen(),
       },
     );
   }

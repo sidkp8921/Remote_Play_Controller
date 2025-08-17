@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class LanguageSelectionScreen extends StatefulWidget {
   @override
@@ -10,19 +11,20 @@ class _LanguageSelectionScreenState extends State<LanguageSelectionScreen> {
   String selectedLanguage = "English";
 
   final List<Map<String, String>> languages = [
-    {"name": "English", "flag": "🇬🇧"},
-    {"name": "Portuguese", "flag": "🇵🇹"},
-    {"name": "Indonesian", "flag": "🇮🇩"},
-    {"name": "Hindi", "flag": "🇮🇳"},
-    {"name": "Russian", "flag": "🇷🇺"},
-    {"name": "Korean", "flag": "🇰🇷"},
-    {"name": "Japanese", "flag": "🇯🇵"},
-    {"name": "France", "flag": "🇫🇷"},
+    {"name": "English", "flag": "🇬🇧", "code": "en"},
+    {"name": "Portuguese", "flag": "🇵🇹", "code": "pt"},
+    {"name": "Indonesian", "flag": "🇮🇩", "code": "id"},
+    {"name": "Hindi", "flag": "🇮🇳", "code": "hi"},
+    {"name": "Russian", "flag": "🇷🇺", "code": "ru"},
+    {"name": "Korean", "flag": "🇰🇷", "code": "ko"},
+    {"name": "Japanese", "flag": "🇯🇵", "code": "ja"},
+    {"name": "France", "flag": "🇫🇷", "code": "fr"},
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xFF031432),
       body: Column(
         children: [
           Padding(
@@ -31,7 +33,7 @@ class _LanguageSelectionScreenState extends State<LanguageSelectionScreen> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  "Select your language",
+                  "select_language".tr(),
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 18,
@@ -77,6 +79,9 @@ class _LanguageSelectionScreenState extends State<LanguageSelectionScreen> {
                           setState(() {
                             selectedLanguage = value!;
                           });
+
+                          /// Change the app language dynamically
+                          context.setLocale(Locale(lang["code"]!));
                         },
                         activeColor: Colors.blueAccent,
                       ),
